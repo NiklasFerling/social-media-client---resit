@@ -1,7 +1,7 @@
-import * as storage from "../storage/index.js";
+import {load} from "../storage/load.js"; // import the load function from the storage/load.js file
 
 export const headers = (contentType) => {
-  const token = storage.load("token");
+  const token = load("token");
   const headers = {};
 
   if (contentType) {

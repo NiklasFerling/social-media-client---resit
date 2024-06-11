@@ -4,7 +4,7 @@ import { save } from "../../storage/index.js";
 
 export async function login(email, password) {
   const response = await fetch(`${apiPath}/social/auth/login`, {
-    method: "post",
+    method: "POST", // Capitalize the method
     body: JSON.stringify({ email, password }),
     headers: headers("application/json"),
   });
